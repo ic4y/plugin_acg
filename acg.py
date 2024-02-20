@@ -30,7 +30,7 @@ class Acg(Plugin):
         try:
             response = requests.get("https://api.oick.cn/api/random/", timeout=30, verify=False)
             if response.status_code == 200:
-                reply = Reply(ReplyType.VIDEO, "https://api.oick.cn/api/random/")
+                reply = Reply(ReplyType.IMAGE, "https://api.oick.cn/api/random/")
             else:
                 logger.error(f"Abnormal site status, request: {response.status_code}")
         except Exception as e:
